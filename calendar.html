@@ -73,7 +73,21 @@ function inicio() {
 			 
         }
 		
-
+		$('#datepicker').datepicker('setDate', new Date(2018,8,10));
+		getClases();
+            	
+		function getClases() {
+        // obtengo las fechas que debo pintarla
+		//en mi caso devolvia un json con [dia,mes,anio]
+		//ejemplo estatico
+		response = [{"dia":"9","mes":"9","anio":"2018"},{"dia":"2","mes":"9","anio":"2018"},{"dia":"12","mes":"9","anio":"2018"}];
+			for (var i = 0; i < response.length; i++) {
+				$(".class_" + response[i].dia + "_" + response[i].mes + "_" + response[i].anio).addClass("disponible");
+                console.log(" pinto .class_" + response[i].dia + "_" + response[i].mes + "_" + response[i].anio);
+				
+            }
+			
+		}
 		
 		
  </script>
