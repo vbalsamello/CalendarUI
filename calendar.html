@@ -59,7 +59,18 @@ function inicio() {
 			
             $.datepicker.regional['es'];
             $.datepicker.setDefaults($.datepicker.regional["es"]);
-          			 
+
+            $('#datepicker').datepicker({
+                onSelect: function (date) {
+                    $("#fechaClase").val((new Date(date).getDate() + 1) + "/" + (new Date(date).getMonth() + 1) + "/" + new Date(date).getFullYear());
+                    $("#irAsistencias").click();
+                },
+                beforeShowDay: function (date) {
+                    //asigno una clase a cada fecha para poder pintarla
+                    return [true, 'class_' + date.getDate() + "_" + (date.getMonth() + 1) + "_" + date.getFullYear(), ''];
+                }
+             });
+			 
         }
 		
 
