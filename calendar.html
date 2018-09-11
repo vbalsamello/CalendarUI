@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Display inline</title>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="jquery-ui.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+  
+  <style>
+	.disponible{
+		background-color:orange!important;
+	}
+  </style>
+</head>
+<body>
+ 
+<input id="fecha" type="text"/>
+
+<button id="btnSub" onclick="alert('send')" class="btn btn-success">Yeah</button>
+Date: 
+<div class="col-md-4">
+<div id="datepicker"></div>
+</div>
+ 
+ 
+ <script>
+		
+ </script>
+ 
+ 
+</body>
+</html>
